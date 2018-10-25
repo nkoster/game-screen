@@ -25,13 +25,7 @@ export default class Ball {
         if (this.position.y < 0 || this.position.y > this.gameHeight- this.size)
             this.speed.y = -this.speed.y;
         // paddle collision
-        let bottomOfBall = this.position.y + this.size;
-        let topOfPaddle = this.game.paddle.position.y;
-        let leftSideOfPaddle = this.game.paddle.position.x;
-        let rightSideOfPaddle = leftSideOfPaddle + this.game.paddle.width;
-        if (bottomOfBall >= topOfPaddle &&
-            this.position.x >= leftSideOfPaddle &&
-            this.position.x + this.size <= rightSideOfPaddle) {
+        if (detectCollision(this, this.game.paddle)) {
             this.speed.y = -this.speed.y;
             this.position.y = this.game.paddle.position.y - this.size;
         }
