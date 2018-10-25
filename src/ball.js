@@ -5,8 +5,8 @@ export default class Ball {
         this.game = game;
         this.image = document.getElementById('ball');
         this.speed = { x: 2, y: 3 };
-        this.position = { x: 10, y: 10 };
-        this.size = 13;
+        this.position = { x: 100, y: 10 };
+        this.size = 16;
     }
     draw(ctx) {
         ctx.drawImage(this.image,
