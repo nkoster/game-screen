@@ -1,9 +1,9 @@
 export default class Ball {
-    constructor(gameWidth, gameHeight) {
-        this.gameWidth = gameWidth;
-        this.gameHeight = gameHeight;
+    constructor(game) {
+        this.gameWidth = game.gameWidth;
+        this.gameHeight = game.gameHeight;
         this.image = document.getElementById('ball');
-        this.speed = { x: 3, y: 2 };
+        this.speed = { x: 2, y: 3 };
         this.position = { x: 10, y: 10 };
         this.size = 13;
     }
